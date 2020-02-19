@@ -3,27 +3,27 @@ Anonymous code submission for ICML.
 
 ## A brief guide to using OENN for Ordinal embedding.
 
-###To run a baseline experiment:
+### To run a baseline experiment:
 ```python
 python train.py -d DATASET_NAME -bs BATCH_SIZE -lr LEARNING_RATE -ep NUM_EPOCHS -l LAYERS -hl HIDDEN_LAYER_WIDTH -minD MIN_EMBEDDING_DIM -maxD MAX_EMBEDDING_DIM -tr TRIPLET_CONSTANT
 ```
 
-###To generate embeddings on new items:
+### To generate embeddings on new items:
 ```python
 python test.py -mp TRAIN_MODEL_PATH -d DATASET_NAME -bs BATCH_SIZE -lr LEARNING_RATE -ep EPOCHS -l LAYERS -hl HIDDEN_LAYER_WIDTH -dim EMBEDDING_DIMENSION -tr NUM_TEST_TRIPLETS 
 ```
 
-###To generate reconstruction of 2D datasets:
+### To generate reconstruction of 2D datasets:
 ```python
 python reprojection_of_2d_datasets.py -d DATASET_NAME -bs BATCH_SIZE -lr LEARNING_RATE -ep EPOCHS -l LAYERS
 ```
 
-###To run a hyperparameter search experiment:
+### To run a hyperparameter search experiment:
 ```python
 python hyperparams/run_experiments_architecture_search.py -d DATASET_NAME -bs BATCH_SIZE -lr LEARNING_RATE -ep EPOCHS -min_n MIN_N -max_n MAX_N -min_hl MIN_HL_WIDTH -max_hl MAX_HL_WIDTH -minD MIN_EMBEDDING_DIM -maxD MAX_EMBEDDING_DIM -reps NUM_REPS
 ```
 
-###To visualize the embedding output using Tsne:
+### To visualize the embedding output using Tsne:
 ```python
 python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS -dim EMBEDDING_DIM -l LAYERS -p PERPLEXITY
 ```
