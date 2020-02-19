@@ -81,11 +81,11 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 23. Blobs (*blobs*)
 ### Datasets with variable dimension.
 **Usage:** ```data, labels = data_select_utils.select_dataset(dataset_name='uniform', input_dim=2, subsample=True, n=10000)```
-24. Mixture of Gaussians (*gmm*)
-25. Uniform distribution (*uniform*)
-26. MNIST projected onto its principal components (*mnist_pc*)
-27. USPS projected onto its principal components (*usps_pc*)
-28. CHAR projected onto its principal components (*char_pc*)
+1. Mixture of Gaussians (*gmm*)
+2. Uniform distribution (*uniform*)
+3. MNIST projected onto its principal components (*mnist_pc*)
+4. USPS projected onto its principal components (*usps_pc*)
+5. CHAR projected onto its principal components (*char_pc*)
 
 ## Examples for running experiments:
 
