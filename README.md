@@ -35,7 +35,7 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 -**LEARNING_RATE:** Learning rate.\
 -**NUM_EPOCHS:** Number of epochs to train.\
 -**LAYERS:** Number of layers of OENN.\
--**HIDDEN_LAYER_WIDTH:** Scaling factor that determines the number of units in each hidden layer = (120 + (hl * dim * log2(n))).\
+-**HIDDEN_LAYER_WIDTH:** Scaling factor to determine the number of units in each hidden layer = (120 + (hl * dim * log2(n))).\
 -**MIN_EMBEDDING_DIM:** Minimum embedding dimension.\
 -**MAX_EMBEDDING_DIM:** Maximum embedding dimension.\
 -**TRIPLET_CONSTANT:** Scaling factor that determines the number of triplets generated = (tr * n * dim * log2(n)).\
@@ -51,10 +51,14 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 
 ## Datasets
 **General usage:** 
-```data, labels = data_select_utils.select_dataset(dataset_name)```
+```python
+data, labels = data_select_utils.select_dataset(dataset_name)
+```
 
-**To subsample:** 
-```data, labels = data_select_utils.select_dataset(dataset_name, subsample=True, n=10000)```
+**To subsample:**
+```python
+data, labels = data_select_utils.select_dataset(dataset_name, subsample=True, n=10000)
+```
 
 ### Real-world datasets
 1. MNIST (*mnist*)
@@ -83,7 +87,9 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 15. Blobs (*blobs*)
 ### Datasets with variable dimension.
 **Usage:** 
-```data, labels = data_select_utils.select_dataset(dataset_name='uniform', input_dim=2, subsample=True, n=10000)```
+```python
+data, labels = data_select_utils.select_dataset(dataset_name='uniform', input_dim=2, subsample=True, n=10000)
+```
 1. Mixture of Gaussians (*gmm*)
 2. Uniform distribution (*uniform*)
 3. MNIST projected onto its principal components (*mnist_pc*)
