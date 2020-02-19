@@ -50,9 +50,11 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 -**PERPLEXITY:** Perplexity parameter for T-SNE visualization.
 
 ## Datasets
-**General usage:** ```data, labels = data_select_utils.select_dataset(dataset_name)```
+**General usage:** 
+```data, labels = data_select_utils.select_dataset(dataset_name)```
 
-**To subsample:** ```data, labels = data_select_utils.select_dataset(dataset_name, subsample=True, n=10000)```
+**To subsample:** 
+```data, labels = data_select_utils.select_dataset(dataset_name, subsample=True, n=10000)```
 
 ### Real-world datasets
 1. MNIST (*mnist*)
@@ -64,23 +66,24 @@ python vis_utils/tsne_cuda.py -mp MODEL_PATH -data DATASET_NAME -hl NUM_HL_UNITS
 7. Forest covertype (*cover_type*)
 8. CHAR (*char*)
 ### List of 2D datasets.
-9. Aggregation (*aggregation*)
-10. Compound (*compound*)
-11. D31 (*d31*)
-12. Flame (*flame*)
-13. Path (*path_based*)
-14. R15 (*r15*)
-15. Birch1 (*birch1*)
-16. Birch2 (*birch2*)
-17. Birch3 (*birch3*)
-18. Spiral (*spiral*)
-19. Worms (*worms*)
-20. T48K (*t48k*)
-21. Two moons (*moons*)
-22. Circles (*circles*)
-23. Blobs (*blobs*)
+1. Aggregation (*aggregation*)
+2. Compound (*compound*)
+3. D31 (*d31*)
+4. Flame (*flame*)
+5. Path (*path_based*)
+6. R15 (*r15*)
+7. Birch1 (*birch1*)
+8. Birch2 (*birch2*)
+9. Birch3 (*birch3*)
+10. Spiral (*spiral*)
+11. Worms (*worms*)
+12. T48K (*t48k*)
+13. Two moons (*moons*)
+14. Circles (*circles*)
+15. Blobs (*blobs*)
 ### Datasets with variable dimension.
-**Usage:** ```data, labels = data_select_utils.select_dataset(dataset_name='uniform', input_dim=2, subsample=True, n=10000)```
+**Usage:** 
+```data, labels = data_select_utils.select_dataset(dataset_name='uniform', input_dim=2, subsample=True, n=10000)```
 1. Mixture of Gaussians (*gmm*)
 2. Uniform distribution (*uniform*)
 3. MNIST projected onto its principal components (*mnist_pc*)
